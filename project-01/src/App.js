@@ -1,8 +1,11 @@
 import "./App.css";
-import { useState } from "react";
-import Title from "./components/Title.js"
+import React, { useState } from "react";
+import Title from "./components/Title.js";
+import Modal from "./components/Modal.js";
+import TasksList from "./components/TasksList.js";
 
 const App = () => {
+  const [showModal, setShowModal] = useState(false);
   const [showEvents, setShowEvents] = useState(true);
   const [events, setEvents] = useState([
     { title: "Practice every day", id: 1 },
@@ -21,31 +24,35 @@ const App = () => {
     });
   };
 
+  const handleModalClose = () => {
+    setShowModal(false);
+  }
+
+  const subtitle = "All the things I have to do to learn to code";
+
   return (
     <div className="App">
-      <Title />
-      {showEvents &&
-        events.map((item, index) => (
-          <div key={item.id}>
-            <h4>
-              {index + 1}. {item.title}
-            </h4>
-            <button onClick={() => handleClick(item.id)}>Delete item</button>
-          </div>
-        ))}
-        <hr />
-        {showEvents && (
-        <div>
+      <Title title="My simple to-do list" subtitle={subtitle} />
+      {showEvents && <TasksList events={events} handleClick={handleClick} />}
+      <hr />
+      {showEvents && (
+        <>
           <button onClick={() => setShowEvents(false)}>Hide events</button>
-        </div>
+        </>
       )}
       {!showEvents && (
-        <div>
+        <>
           <button onClick={() => setShowEvents(true)}>Show events</button>
-        </div>
+        </>
       )}
+      <hr/>
+      <button onClick={() => setShowModal(true)}>Click here for my special offer!</button>
+      {showModal && <Modal handleClose={handleModalClose}>
+      <h2>10% Off Coupon!!!</h2>
+        <p>Use the code NINJA10 at the checkout</p>
+      </Modal>}
     </div>
   );
-}
+};
 
 export default App;
