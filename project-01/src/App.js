@@ -47,7 +47,7 @@ const App = () => {
       )}
       <hr/>
       <button onClick={() => setShowModal(true)}>Click here for my special offer!</button>
-      {showModal && <Modal handleClose={handleModalClose}>
+      {showModal && <Modal handleClose={handleModalClose} isSalesModal={true}>
       <h2>10% Off Coupon!!!</h2>
         <p>Use the code NINJA10 at the checkout</p>
       </Modal>}
