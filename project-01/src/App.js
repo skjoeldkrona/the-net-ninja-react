@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Title from "./components/Title.js";
 import Modal from "./components/Modal.js";
 import TasksList from "./components/TasksList.js";
+import NewTaskForm from "./components/NewTaskForm.js";
 
 const App = () => {
   const [showModal, setShowModal] = useState(false);
@@ -26,7 +27,7 @@ const App = () => {
 
   const handleModalClose = () => {
     setShowModal(false);
-  }
+  };
 
   const subtitle = "All the things I have to do to learn to code";
 
@@ -45,12 +46,13 @@ const App = () => {
           <button onClick={() => setShowEvents(true)}>Show events</button>
         </>
       )}
-      <hr/>
-      <button onClick={() => setShowModal(true)}>Click here for my special offer!</button>
-      {showModal && <Modal handleClose={handleModalClose} isSalesModal={true}>
-      <h2>10% Off Coupon!!!</h2>
-        <p>Use the code NINJA10 at the checkout</p>
-      </Modal>}
+      <hr />
+      <button onClick={() => setShowModal(true)}>Add new task</button>
+      {showModal && (
+        <Modal handleClose={handleModalClose} isSalesModal={true}>
+          <NewTaskForm />
+        </Modal>
+      )}
     </div>
   );
 };
