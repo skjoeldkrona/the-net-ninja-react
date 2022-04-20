@@ -9,6 +9,8 @@ const TasksList = ({ events, handleClick }) => {
           <h4>
             {index + 1}. {item.title}
           </h4>
+          <p>Due by: {item.date}</p>
+          <p>Priority: {item.priority}</p>
           <button onClick={() => handleClick(item.id)}>Delete item</button>
         </div>
       ))}</div>
