@@ -1,0 +1,40 @@
+{
+  "trips": [
+    {
+      "title": "Two night stay in Paris",
+      "price": "$200",
+      "id": "1",
+      "location": "europe"
+    },
+    {
+      "title": "Three night stay in Berlin",
+      "price": "$300",
+      "id": "3",
+      "location": "europe"
+    },
+    {
+      "title": "Four night stay in Warsaw",
+      "price": "$400",
+      "id": "3",
+      "location": "europe"
+    },
+    {
+      "title": "Five night stay in Madrid",
+      "price": "$500", 
+      "id": "4",
+      "location": "europe"
+    },
+    {
+      "title": "Five night stay in New York",
+      "price": "$1500", 
+      "id": "5",
+      "location": "america"
+    },
+    {
+      "title": "One night stay in Las Vegas",
+      "price": "$2500", 
+      "id": "6",
+      "location": "america"
+    }
+  ]
+}
