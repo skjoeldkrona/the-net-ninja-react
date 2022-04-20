@@ -1,11 +1,15 @@
-
-import './App.css';
-import TripList from './components/TripList.js';
+import { useState } from "react";
+import "./App.css";
+import TripList from "./components/TripList.js";
 
 function App() {
+  const [showTrips, setShowTrips] = useState(true);
   return (
     <div className="App">
-      <TripList />
+      <button onClick={() => setShowTrips(false)}>
+        Hide trips
+      </button>
+      {showTrips && <TripList />}
     </div>
   );
 }
