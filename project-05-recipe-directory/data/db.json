@@ -36,6 +36,25 @@
       ],
       "method": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse minima ex rem quis similique eum ratione quaerat, voluptas molestias ut repudiandae delectus voluptates. Eius esse at tenetur ab accusamus excepturi?",
       "cookingTime": "35 minutes"
+    },
+    {
+      "title": "Tortilla de patatas",
+      "ingredients": [
+        "8 eggs",
+        "5 potatoes",
+        "1 onion",
+        "olive oil"
+      ],
+      "method": "Just do it!",
+      "cookingTime": "45 minutes",
+      "id": "lz6DZ6H"
+    },
+    {
+      "title": "Whatever",
+      "ingredients": [],
+      "method": "Cook the damn thing!",
+      "cookingTime": "12 minutes",
+      "id": "FNDnVxZ"
     }
   ]
 }
