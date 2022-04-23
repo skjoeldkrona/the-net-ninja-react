@@ -25,3 +25,8 @@
   border: 1px solid #fff; 
   border-radius: 4px;
 }
+
+.navbar a:hover {
+  color:  #58249c;
+  background-color: #fff;
+}
