@@ -26,7 +26,7 @@
   border-radius: 4px;
 }
 
-.navbar .anchor:hover {
-  color:  #58249c;
-  background-color: #fff;
+.navbar a:last-child:hover {
+  background: #fff;
+  color: #333;
 }
